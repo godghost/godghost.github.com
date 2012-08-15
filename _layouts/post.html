@@ -8,7 +8,7 @@ page_name: blog
 </div>
 
 <div id="related">
-  <h3>Related Posts</h3>
+  <h3>相关文章</h3>
   <ul class="posts">
     {% for post in site.related_posts limit:3 %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -22,7 +22,7 @@ page_name: blog
   {% endfor %} </small>
 
 <div id="comments">
-    <h3>Comments</h3>
+    <h3>评论</h3>
        <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
