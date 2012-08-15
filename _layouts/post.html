@@ -1,0 +1,28 @@
+---
+layout: default
+page_name: blog
+---
+<div class="post">
+    <h2>{{page.title}}</h2>
+    {{ content }}
+</div>
+
+<div id="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    {% for post in site.related_posts limit:3 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<small class="meta">{{ page.date | date:"%B %d, %Y" }} {% for t in page.tags %}
+  {% if forloop.first == true %} | {% endif %}
+  <a href='/tags#{{ t | escape }}'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
+  {% endfor %} </small>
+
+<div id="comments">
+    <h3>Comments</h3>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" src="http://loong4life.disqus.com/combination_widget.js?num_items=10&hide_mods=0&color=blue&default_tab=people&excerpt_length=200"></script>
+</div>

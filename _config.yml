@@ -1,17 +1,2 @@
-permalink: /:categories/:year/:month/:day/:title 
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
-pygments: true
-
-title : Loong 4 Life
-tagline: Blog, Startup
-author : Loong
-  name : Loong
-  email : godghost.huang@gmail.com
-  github : godghost
-
-
-production_url : http://loong4life.com
- 
-markdown: rdiscount 
+permalink: pretty
+paginate: 5
