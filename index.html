@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Loong 4 Life
+title: 选择另一种生活
 page_name: blog
 ---
 
@@ -14,7 +14,7 @@ page_name: blog
     <p class="excerpt">
         {{ post.content | strip_html | truncatewords:100 }} &nbsp;  <a href="{{ post.url }}" class='read-more'>全文</a>
     </p> -->
-    <small class="meta">{{ post.date | date:"%B %d, %Y" }} | <a href='{{ post.url }}'>查看评论</a> 
+    <small class="meta">{{ post.date | date:"%B %d, %Y" }} | <a href='{{ post.url }}#comments'>查看评论</a> 
       {% for t in post.tags %}
         {% if forloop.first == true %} | {% endif %}
         <a href='/tags#{{ t | escape }}'>{{ t }}</a>{% if forloop.last == false %}, {% endif %}
