@@ -91,11 +91,33 @@ li {
     border-bottom: solid 32px #000;
 }
 
-/***** Header */
 #top {
     margin: 0;
-    height: 460px;
+    height: 333px;
     width: 900px;
+}
+
+#nav {
+    padding: 0;
+    background-color:#214a64;
+    height: 32px;
+}
+
+#nav li {
+    display: inline;
+}
+
+#nav li a {
+    text-decoration: none;
+    float: left;
+    padding: 5px;
+    background-color: #214a64;
+    color: #fff;
+}
+
+#nav li a:hover,active {
+    background-color: #497c9d;
+    border-bottom: 0px;
 }
 
 #content, #bottom {
@@ -157,10 +179,4 @@ li {
 	color:#666666;
 	padding:5px;
 	margin-top:16px;
-}
-
-#bottom {
-	border-top:2px solid #CCCCCC;
-	margin:10px auto;
-	padding-top:5px;
 }
