@@ -10,9 +10,13 @@
     margin: 0;
     padding: 0;
 }
-div{
-    margin:0 auto;
-    text-align:center;
+.content{
+    position:absolute;
+    top:50%;
+    height:240px;
+    margin-top: -120px;
+    width: 100%;
+    text-align: center;
 }
 .heartDiv{
     -webkit-animation-name: beat;
@@ -21,6 +25,9 @@ div{
     -webkit-animation-timing-function: ease-out;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-play-state: running;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 .heart{
     width: 150px;
@@ -32,8 +39,6 @@ div{
     -webkit-transform: rotate(45deg);
     border-top-left-radius: 50px 50px;
     border-bottom-left-radius: 50px 50px;
-    position: relative;
-    margin-top: 200px;
 }
 .heart::after{
     transform: rotate(-90deg);
@@ -51,12 +56,11 @@ div{
     top: -25px;
     right: -25px;
 }
-.text {
-    width: 60%;
-    margin: 0 auto;
-}
 .say{
-    margin-top: 60px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
     color: #B42020;
     background-color: #fff;
 }
@@ -78,7 +82,7 @@ div{
 
 </head>
 <body>
-<div>
+<div class="content">
     <div class="heartDiv">
         <div class="heart"></div>
     </div>
@@ -87,7 +91,6 @@ div{
     </div>
     <audio id="hideBeat" autoplay="autoplay" loop hidden="hidden">
         <source src="./files/beat.mp3" type="audio/mpeg">
-    </audio>
 </div>
 </body>
 </html>
